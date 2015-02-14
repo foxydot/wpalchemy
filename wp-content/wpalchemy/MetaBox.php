@@ -1727,7 +1727,8 @@ class WPAlchemy_MetaBox
 
 				global $wp_embed;
 
-				return do_shortcode($wp_embed->run_shortcode($value));
+				//return do_shortcode($wp_embed->run_shortcode($value));
+				return apply_filters('the_content',$value);
 			}
 		}
 		else
